@@ -153,3 +153,4 @@
  ;; If there is more than one, they won't work right.
  )
 (defun sesman-linked-sessions (x y))
+(defun sesman-current-sessions (x y))

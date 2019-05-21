@@ -44,6 +44,8 @@
 (setq auto-save-default t)
 (setq column-number-mode t)
 
+;; Remove trailing whitespaces when saving buffer.
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 ;; comments
 (defun toggle-comment-on-line ()
@@ -72,4 +74,3 @@
 ;; Line numbers customization
 (set-face-foreground 'linum "#bdecb6")
 (setq linum-format "%d ")
-

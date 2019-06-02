@@ -57,9 +57,6 @@
 (add-hook 'cider-mode-hook #'company-mode)
 (global-set-key (kbd "TAB") #'company-indent-or-complete-common)
 
-(define-key cider-repl-mode-map (kbd "<up>") 'cider-repl-previous-input)
-(define-key cider-repl-mode-map (kbd "<down>") 'cider-repl-next-input)
-
 ;; Use clojure mode for other extensions
 (add-to-list 'auto-mode-alist '("\\.edn$" . clojure-mode))
 (add-to-list 'auto-mode-alist '("\\.boot$" . clojure-mode))
@@ -91,6 +88,8 @@
      (define-key clojure-mode-map (kbd "C-c C-v") 'cider-start-http-server)
      (define-key clojure-mode-map (kbd "C-M-r") 'cider-refresh)
      (define-key clojure-mode-map (kbd "C-c u") 'cider-user-ns)
-     (define-key cider-mode-map (kbd "C-c u") 'cider-user-ns)))
+     (define-key cider-mode-map (kbd "C-c u") 'cider-user-ns)
+     (define-key cider-repl-mode-map (kbd "<up>") 'cider-repl-previous-input)
+     (define-key cider-repl-mode-map (kbd "<down>") 'cider-repl-next-input)))
 
 ;;(add-hook 'cider-repl-mode-hook '(lambda () (setq scroll-conservatively 101)))
